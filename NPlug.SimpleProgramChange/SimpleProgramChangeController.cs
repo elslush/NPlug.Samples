@@ -13,4 +13,9 @@ public class SimpleProgramChangeController : AudioController<SimpleProgramChange
         SetMappingBusToUnit(BusMediaType.Event, BusDirection.Input, 0, 0, Model);
         return true;
     }
+
+    protected override IAudioPluginView? CreateView()
+    {
+        return new MyAudioPluginUI();
+    }
 }
